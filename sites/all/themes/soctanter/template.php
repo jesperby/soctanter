@@ -9,13 +9,19 @@
  * Override node form
  */
 function soctanter_form_node_form_alter(&$form, &$form_state, $form_id) {
-        if (isset($form['revision_information'])) {
+
+    if ($form_id==="fraga_node_form") {
+             if (isset($form['revision_information'])) {
           if (!isset($form['#node']->nid)) {
             $form['revision_information']['#access'] = FALSE;
           }
         }
+        $form['actions']['submit']['#submit'][] = 'soctanter_node_submit';
+    }
 
-
+}
+function soctanter_node_submit($form, &$form_state) {
+$form_state['redirect'] = url('node/8');
 }
 /*
 function NEWTHEME_preprocess_html(&$vars) {
