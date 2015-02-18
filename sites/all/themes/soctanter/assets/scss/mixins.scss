@@ -1,0 +1,32 @@
+// Clearfix
+%clearfix {
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+}
+
+
+// Media Queries
+
+// Tablet
+@mixin medium {
+	@media screen and (max-width: #{$medium}) {
+		@content;
+	}
+}
+
+// Mobile
+@mixin small {
+	@media screen and (max-width: #{$small}) {
+		@content;
+	}
+}
+
+// Print
+@mixin print {
+	@media print {
+		@content;
+	}
+}

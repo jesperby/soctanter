@@ -36,13 +36,13 @@ regions[highlighted] = Highlighted
 
 
 ;-------------- C S S -------------
-stylesheets[all][] = css/style.css
+stylesheets[all][] = build/css/main.min.css
 
 ;-------------- CSS FOAD -------------
 ;stylesheets[all][] = donteverloadmeagain.css
 
 ;-------------- JS -------------
-scripts[] = js/script.js
+scripts[] = build/js/main.min.js
 
 ;-------------- Default Mothership Settings  -------------
 settings[mothership_rebuild_registry] = 0

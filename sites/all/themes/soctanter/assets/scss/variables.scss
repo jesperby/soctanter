@@ -1,0 +1,24 @@
+// Colors
+$color-primary:              #01668d;
+
+// Gray Tones
+$color-black:                #000;
+$color-off-black:            #333;
+$color-dark-gray:            #595959;
+$color-medium-gray:          #dcdcdc;
+$color-light-gray:           #e8e8e8;
+$color-lighter-gray:         #f4f4f4;
+$color-light:                #fff;
+
+// Typography
+$base-font-size:             62.5%;
+$base-line-height:           1.5;
+$sans-serif:                 Arial, Helvetica, sans-serif;
+$serif:                      Georgia, "Times New Roman", serif;
+
+// Media Queries
+$full-width:                 960px;
+$gutter:                     30px;
+$half-gutter:                $gutter / 2;
+$small:                      640px;
+$medium:                     960px;
