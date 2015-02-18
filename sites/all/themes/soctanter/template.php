@@ -3,6 +3,20 @@
   Preprocess
 */
 
+
+
+/**
+ * Override node form
+ */
+function soctanter_form_node_form_alter(&$form, &$form_state, $form_id) {
+        if (isset($form['revision_information'])) {
+          if (!isset($form['#node']->nid)) {
+            $form['revision_information']['#access'] = FALSE;
+          }
+        }
+
+
+}
 /*
 function NEWTHEME_preprocess_html(&$vars) {
   //  kpr($vars['content']);
@@ -16,10 +30,10 @@ function NEWTHEME_preprocess_page(&$vars,$hook) {
 
   //webfont
   //drupal_add_css('http://cloud.webtype.com/css/CXXXX.css','external');
-  
-  //googlefont 
+
+  //googlefont
   //  drupal_add_css('http://fonts.googleapis.com/css?family=Bree+Serif','external');
- 
+
 }
 */
 /*
@@ -32,11 +46,11 @@ function NEWTHEME_preprocess_block(&$vars, $hook) {
   //  kpr($vars['content']);
 
   //lets look for unique block in a region $region-$blockcreator-$delta
-   $block =  
-   $vars['elements']['#block']->region .'-'. 
-   $vars['elements']['#block']->module .'-'. 
+   $block =
+   $vars['elements']['#block']->region .'-'.
+   $vars['elements']['#block']->module .'-'.
    $vars['elements']['#block']->delta;
-   
+
   // print $block .' ';
    switch ($block) {
      case 'header-menu_block-2':
@@ -46,7 +60,7 @@ function NEWTHEME_preprocess_block(&$vars, $hook) {
        $vars['classes_array'][] = '';
        break;
     default:
-    
+
     break;
 
    }
@@ -71,8 +85,8 @@ function NEWTHEME_preprocess_block(&$vars, $hook) {
 function NEWTHEME_preprocess_node(&$vars,$hook) {
   //  kpr($vars['content']);
 
-  // add a nodeblock 
-  // in .info define a region : regions[block_in_a_node] = block_in_a_node 
+  // add a nodeblock
+  // in .info define a region : regions[block_in_a_node] = block_in_a_node
   // in node.tpl  <?php if($noderegion){ ?> <?php print render($noderegion); ?><?php } ?>
   //$vars['block_in_a_node'] = block_get_blocks_by_region('block_in_a_node');
 }
@@ -96,7 +110,7 @@ function NEWTHEME_preprocess_field(&$vars,$hook) {
     case 'field_FOO':
       $vars['classes_array'][] = 'classname1';
     case 'field_BAR':
-      $vars['classes_array'][] = 'classname1';    
+      $vars['classes_array'][] = 'classname1';
     default:
       break;
   }
