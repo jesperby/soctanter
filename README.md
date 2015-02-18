@@ -11,11 +11,10 @@ Functionality:
 * ckeditor
 * ctools
 * entity
-*forum_access
+* forum_access
 ** acl
 ** chain_menu_access
 * features
-* ldap
 * subscriptions
 ** mail_edit
 ** token
