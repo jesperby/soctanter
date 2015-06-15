@@ -1,0 +1,25 @@
+header[role="banner"], footer[role="contentinfo"]{
+	width: 100%;
+	border: none;
+	text-align: center;
+	a{
+		color: #fff;
+		padding: 10px;
+	}
+}
+.header-region{
+	float: none;
+}
+.page {
+	width: 100%;
+	border: none;
+	padding: 5%;
+	#main-content{
+		 float: none;
+		margin: 0 auto;
+		max-width: 960px;
+	}
+}
+footer {
+    background: none repeat scroll 0 0 #ccc;
+}

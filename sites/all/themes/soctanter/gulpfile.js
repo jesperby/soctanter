@@ -10,8 +10,7 @@ var jshint = require('gulp-jshint'),
 	imagemin = require('gulp-imagemin'),
 	shell = require('gulp-shell'),
 	minifyCSS = require('gulp-minify-css'),
-	autoprefixer = require('gulp-autoprefixer'),
-	iconify = require('gulp-iconify'),
+	autoprefixer = require('gulp-autoprefixer');
 
 
 // Lint Task
